@@ -4,6 +4,14 @@ void main() {
   runApp(const MyApp());
 }
 
+extension CapitalizedStringExtension on String {
+  String toCapitalized() => length > 0
+      ? '${this[0].toUpperCase()}${this.substring(1).toLowerCase()}'
+      : '';
+  String get capitalizeFirstofEach =>
+      this.split(' ').map((str) => str.toCapitalized()).join(' ');
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -11,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'san portfolio'.capitalizeFirstofEach,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -24,7 +32,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter San Portfolio 2022'),
+      home: const MyHomePage(title: 'flutter san portfolio 2022'),
     );
   }
 }
@@ -40,7 +48,6 @@ class MyHomePage extends StatefulWidget {
   // case the title) provided by the parent (in this case the App widget) and
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
-
   final String title;
 
   @override
