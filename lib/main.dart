@@ -31,6 +31,7 @@ class Portfolio extends StatelessWidget {
         body: SafeArea(
           child: 
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
