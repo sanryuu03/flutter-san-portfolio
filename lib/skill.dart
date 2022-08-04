@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_san_portfolio/CapitalizedStringExtension/CapitalizedStringExtension.dart';
-
+import 'package:flutter_san_portfolio/dummy/programmer _skills.dart';
 
 class Skill extends StatelessWidget {
   @override
@@ -45,7 +45,7 @@ class Skill extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Text('skill'.capitalizeFirstofEach,
+                      Text('kenapa aku belajar laravel ?'.capitalizeFirstofEach,
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w500)),
@@ -53,45 +53,32 @@ class Skill extends StatelessWidget {
                         children: [
                           SizedBox(width: 12),
                           Image.asset('images/laravel.png'),
-                          Image.asset(
-                            'images/mysql.png',
-                            width: 100,
-                            height: 100,
-                          ),
+                          Text('laravel'.capitalizeFirstofEach,
+                              style: TextStyle(
+                                  color: Colors.red[200],
+                                  fontWeight: FontWeight.w500)),
                           SizedBox(width: 100),
-                          GestureDetector(
-                                                        onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Skill()));
-                            },
-                            child: Text('see more'.capitalizeFirstofEach,
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500)),
-                          ),
                         ],
                       ),
-                      SizedBox(
-                        height: 50,
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10.0, left: 45.5),
+                        child: Text(
+                          'aku belajar backend karna ku rasa sangat sulit untuk belajar frontend.'
+                              .capitalizeFirstofEach,
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
                       ),
                       Row(
                         children: [
-                          SizedBox(width: 10),
+                          SizedBox(height: 50, width: 20),
                           Text(
-                            'kenapa aku membuat aplikasi ini ?'
+                            'apa yang sudah dan yang sedang ku pelajari ?'
                                 .capitalizeFirstofEach,
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500),
                           ),
                         ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10.0, left: 55.5),
-                        child: Text(
-                          'tentu saja karna ini tugas submission.\n ternyata aku memang tidak ada bakat dibidang seni. \n ingin jadi fullstack ternyata tidak semudah kubayangkan. \n\n bingung mau bikin apa lagi, hahaha'
-                              .capitalizeFirstofEach,
-                          style: TextStyle(fontWeight: FontWeight.w500),
-                        ),
                       ),
                     ],
                   ),
