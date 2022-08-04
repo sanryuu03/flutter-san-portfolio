@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_san_portfolio/CapitalizedStringExtension/CapitalizedStringExtension.dart';
-// import 'package:flutter_san_portfolio/skill.dart';
+import 'package:flutter_san_portfolio/skill.dart';
 
 void main() {
   runApp(const MyApp());
@@ -78,10 +78,15 @@ class Portfolio extends StatelessWidget {
                             height: 100,
                           ),
                           SizedBox(width: 100),
-                          Text('see more'.capitalizeFirstofEach,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500)),
+                          GestureDetector(
+                                                        onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Skill()));
+                            },
+                            child: Text('see more'.capitalizeFirstofEach,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w500)),
+                          ),
                         ],
                       ),
                       SizedBox(
@@ -104,8 +109,7 @@ class Portfolio extends StatelessWidget {
                         child: Text(
                           'tentu saja karna ini tugas submission.\n ternyata aku memang tidak ada bakat dibidang seni. \n ingin jadi fullstack ternyata tidak semudah kubayangkan. \n\n bingung mau bikin apa lagi, hahaha'
                               .capitalizeFirstofEach,
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500),
+                          style: TextStyle(fontWeight: FontWeight.w500),
                         ),
                       ),
                     ],
