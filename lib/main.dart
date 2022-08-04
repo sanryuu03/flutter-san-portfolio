@@ -29,39 +29,29 @@ class Portfolio extends StatelessWidget {
           title: Text('san portfolio 2022'.capitalizeFirstofEach),
         ),
         body: SafeArea(
-          child: 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 10),
-                  SizedBox(
-                    width: 100,
-                    child: Image.asset('images/boy.png'),
-                  ),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 50),
-                  SizedBox(
-                    child: Text(
-                      'muhammad hasan'.capitalizeFirstofEach,
-                    style: TextStyle(fontWeight: FontWeight.w700),
-                    ),
-                    
-                  ),
-                  Row(children: [
-                  Icon(Icons.offline_bolt),
-                  Text('teknik sastra'.capitalizeFirstofEach),
-                  Icon(Icons.flash_on_sharp),
-                  ],)
-                ],
-              ),
-            ],
+          child: Center(
+            child: Column(
+              children: [
+                SizedBox(height: 10),
+                Image.asset(
+                  'images/boy.png',
+                  width: 100,
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'muhammad hasan'.capitalizeFirstofEach,
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.offline_bolt),
+                    Text('teknik sastra'.capitalizeFirstofEach),
+                    Icon(Icons.flash_on_sharp),
+                  ],
+                ),
+              ],
+            ),
           ),
         ));
   }
