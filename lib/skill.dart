@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_san_portfolio/CapitalizedStringExtension/CapitalizedStringExtension.dart';
-import 'package:flutter_san_portfolio/dummy/programmer _skills.dart';
 
 class Skill extends StatelessWidget {
   @override
@@ -33,7 +32,7 @@ class Skill extends StatelessWidget {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 350,
+                  height: 450,
                   decoration: BoxDecoration(
                       color: Colors.cyan,
                       borderRadius: BorderRadius.vertical(
@@ -80,6 +79,14 @@ class Skill extends StatelessWidget {
                           ),
                         ],
                       ),
+                      Text(
+                        'klik tombol favorite dibawah ini untuk kepo xixixi'
+                            .capitalizeFirstofEach,
+                        style: TextStyle(
+                            color: Colors.blue[900],
+                            fontWeight: FontWeight.w500),
+                      ),
+                      const FavoriteButton(),
                     ],
                   ),
                 ),
@@ -87,5 +94,40 @@ class Skill extends StatelessWidget {
             ),
           ),
         ));
+  }
+}
+
+class FavoriteButton extends StatefulWidget {
+  const FavoriteButton({Key? key}) : super(key: key);
+
+  @override
+  _FavoriteButtonState createState() => _FavoriteButtonState();
+}
+
+class _FavoriteButtonState extends State<FavoriteButton> {
+  bool isFavorite = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        SizedBox(width: 100),
+        IconButton(
+          icon: Icon(
+            isFavorite ? Icons.favorite : Icons.favorite_border,
+            color: Colors.red,
+             size: 50.0,
+          ),
+          tooltip: 'Increase volume by 10',
+          onPressed: () {
+            setState(() {
+              isFavorite = !isFavorite;
+            });
+          },
+        ),
+        SizedBox(width: 10),
+        if (isFavorite) Text("ya saya kepo"),
+      ],
+    );
   }
 }

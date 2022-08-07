@@ -79,8 +79,12 @@ class Portfolio extends StatelessWidget {
                           ),
                           SizedBox(width: 100),
                           GestureDetector(
-                                                        onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Skill()));
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          Skill()));
                             },
                             child: Text('see more'.capitalizeFirstofEach,
                                 style: TextStyle(
